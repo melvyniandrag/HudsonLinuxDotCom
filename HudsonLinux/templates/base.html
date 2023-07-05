@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hudson Linux</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+
+	nav {
+	    margin: 0;
+	    padding: 0;
+	    text-align:center;
+	    list-style: none;
+	    background-color: #EEEEEE;
+	    border-bottom: 5px solid #AAAAAA;
+	    border-top: 1px solid #999999;
+	}
+	nav li {
+	    display:inline-block;
+	}
+	nav li a {
+	    display: block;
+	    padding: 15px 15px;
+	    font-size: 2em;
+	    text-decoration: none;
+	    color: #D53411;
+	}
+	
+	nav li a:hover {
+	    color: #fff;
+	    background-color: #000;
+	    -moz-border-radius: 3px;
+	    -webkit-border-radius: 3px;
+	    -khtml-border-radius: 3px;
+	    border-radius: 3px;
+	}
+    </style>
+</head>
+<body>
+    <nav>
+	    <ul>
+		    <li><a href="{{ url_for('home') }}">Home</a</li>
+		    <li><a href="{{ url_for('classes') }}">Classes</a></li>
+		    <li><a href="{{ url_for('services') }}">Services</a></li>
+		    <li><a href="{{ url_for('instructors') }}">Staff</a></li>
+		    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+	    </ul>
+    </nav>
+    
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+
+</body>
+</html>
+

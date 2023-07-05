@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
@@ -19,6 +19,24 @@ def create_app(test_config=None):
 
     @app.route('/')
     def home():
-        return 'Hello world!'
+        return render_template('home.html')
+
+    @app.route('/classes/')
+    def classes():
+        return render_template('classes.html')
+
+    @app.route('/services/')
+    def services():
+        return render_template('services.html')
+
+    @app.route('/instructors/')
+    def instructors():
+        return render_template('instructors.html')
+
+    @app.route('/contact/')
+    def contact():
+        return render_template('contact.html')
+
+
 
     return app
