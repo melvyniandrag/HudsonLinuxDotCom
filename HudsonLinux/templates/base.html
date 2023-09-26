@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <title>Hudson Linux</title>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+          crossorigin="anonymous">
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous"> 
+
     <style>
 
 	nav {
@@ -37,19 +43,44 @@
     </style>
 </head>
 <body>
-    <nav>
-	    <ul>
-		    <li><a href="{{ url_for('home') }}">Home</a</li>
-		    <li><a href="{{ url_for('classes') }}">Classes</a></li>
-		    <li><a href="{{ url_for('services') }}">Services</a></li>
-		    <li><a href="{{ url_for('instructors') }}">Staff</a></li>
-		    <li><a href="{{ url_for('contact') }}">Contact</a></li>
-	    </ul>
+
+	<nav class="navbar navbar-expand-md navbar-light py-4" id="main-nav">
+      <div class="container">
+
+        <a href="/" class="navbar-brand">
+          <img src="{{url_for('static', filename='3DPrinter.jpg')}}" height="50" alt="logo">
+        </a>
+
+        <button class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto navbar-right">
+		    <li class="nav-item ml-auto"><a href="{{ url_for('home') }}" class="nav-link">Home</a</li>
+		    <li class="nav-item ml-auto"><a href="{{ url_for('classes') }}" class="nav-link">Classes</a></li>
+		    <li class="nav-item ml-auto"><a href="{{ url_for('services') }}" class="nav-link">Services</a></li>
+		    <li class="nav-item ml-auto"><a href="{{ url_for('instructors') }}" class="nav-link">Staff</a></li>
+		    <li class="nav-item ml-auto"><a href="{{ url_for('contact') }}" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
+
     
-    <div class="content">
-        {% block content %} {% endblock %}
+
+    {% block content %} {% endblock %}
+
+    <div class="footer fixed-bottom">
+    	phone number and email here
     </div>
+
+   <script src=" https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js " integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
