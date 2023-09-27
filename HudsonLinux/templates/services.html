@@ -4,10 +4,10 @@
 
 
 
-<section id="explore-section" class="bg-light text-muted py-5">
+<section id="explore-section" class="bg-dark text-white py-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-12">
            <h1>Services Offered</h1>
 			<p>
 				In addition to classes, we offer a wide array of technical services. Here at  Hudson Linux we have many useful machines such as 3D printers, CNC routers, State-of-the-art photo scanners, and more. Do you have some creative goal, but you dont want to waste time and money investing in the expensive tools? Let us help you! Your patronage helps us afford the best machines, gives us time to learn how to use them well, and lets us deliver an awesome result to you!
@@ -18,17 +18,84 @@
 </section>
 
 
-<section id="explore-section" class="bg-light text-muted py-5">
+<section id="3d-print-section" class="bg-light text-muted py-5">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
 				<img src="{{url_for('static', filename='3DPrinter.jpg')}}" alt="" class="img-fluid mb-3 rounded-circle">
 			</div>
 			<div class="col-md-6">
-				<h3> Services </h3>
+				<h3> 3D Printing </h3>
+				<p> Do you want to design a custom toy for your kid? Need a strange replacement part for a coffee pot in your house?
+				Whatever thing you need but can't find in stores - we can make it for you!</p>
+				<a href="#">Go to demo gallery</a>
 			</div>  
 		</div>
 	</div>
 </section>
+
+<section id="photo-scan-section" class="bg-secondary text-white py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3> Photo Scanning</h3>
+				<p> Make a great gift for your relatives! Does your grandma have a box of 50 year old photos in the attic? Bring it to us and we'll scan them to a usb stick for you. Share them with the whole family around the world, explore your ancestry together. A heart warming gift.</p>
+				<a href="#" class="text-light bg-dark">Click For More Information</a>
+			</div>  
+			<div class="col-md-6">
+				<img src="{{url_for('static', filename='sepia_crop.jpg')}}" alt="" class="img-fluid mb-3 rounded-circle">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="software-development-section" class="bg-light text-muted py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3> Software Development</h3>
+				<p> Our team at Hudson Linux has expertise in software for Linux, Android, Windows and iOS. We have particular expertise in writing software that integrates Bluetooth connectivity. Comfortable working in C++, Python, C, Kotlin, C#, and more. Here is a gallery of some software projects we've completed:</p>
+				<ul>
+					
+					<li>
+						<p> 
+							<a href="https://play.google.com/store/apps/details?id=com.ballofknives.bluetoothmeatball&hl=en_US&gl=US">Bluetooth Meatball</a>, an interesting video game prototype. Uses the cellphone accelerometer + bluetooth to make an interesting 2 player game.
+						</p>
+					</li>
+					<li>
+						<p> 
+							<a href="https://mathtestmaker.com">Mathtestmaker.com</a>, a math exam generation website. Django website + bootstrap CSS + JS. Runs in a Docker container on Debian Linux.
+						</p>
+					</li>
+					<li>
+						<p> 
+						<a href="https://store.steampowered.com/app/2071540/Timmy_Types/">Timmy Types</a>, a typing game on Steam. Unreal engine blueprint & C++. For Windows and Linux.
+						</p>
+					</li>
+				</ul>
+			</div>  
+			<div class="col-md-6">
+				<img src="{{url_for('static', filename='code.PNG')}}" alt="" class="img-fluid mb-3 rounded-circle">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="cnc-section" class="bg-secondary text-white py-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="{{url_for('static', filename='cnc.jpg')}}" alt="" class="img-fluid mb-3 rounded-circle">
+			</div>
+			<div class="col-md-6">
+				<h3>CNC Routing and Milling</h3>
+				<p>In addition to our 3D Printing capabilities, we can also do CNC routing in wood, acrylic and soft metals. Have an idea for a custom coin you want to engrave? Want to engrave or laser etc a design into a piece of wood? Contact us and we can help you with the CAD and milling.</p>
+				<a href="#" class="text-light bg-dark">Click For More Information</a>
+			</div>  
+		</div>
+	</div>
+</section>
+
+
 
 {% endblock %}
