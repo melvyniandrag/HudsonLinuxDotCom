@@ -1,8 +1,69 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Welcome to Hudson Linux!</h1>
-    <p>Hudson Linux is a small school offering hands on technical classes to the Hudson County area and beyond. Have you heard people talking about a thing called Linux and want to know what they're talking about? Are you a total beginner and looking to learn how to write computer programs? Are you a seasoned developer looking to brushen up on your skills? Do you have a vision to develop some sort of robot but need help coding and 3d printing pieces? Give us a call at: </p>
-    <h3> 551-300-9323 </h3>
-    <p>At Hudson Linux we have expertise in Linux, Bluetooth, Android, and Unreal Engine game development. In addition we have a wide array of useful, pricey technology - we have VR headsets, CNC machines, 3d printers, photo scanners, pcs, routers, switches, development boards, microcontrollers, etc.. If you need some expensive hardware but dont want to waste money or the space in your apartment - give us a call, we probably have the tool you need and can make what you need.</p>
+
+<section id="landing-section" class="bg-white py-5 mb-5">
+  <div class="container">
+
+    <div class="row text-white" id="landing-header">
+      <div class="col-md-12 mx-auto my-auto">
+        <h1 style="text-align: center; font-size: 4rem; font-family: monospace; font-weight: bold;">Welcome to Hudson Linux!</h1>
+      </div>
+    </div>
+
+    <div class="row align-items-center m-3">
+
+      <div class="col-md-6 offset-md-3 bg-warning m-auto">
+        <p style="text-align:center; font-style: italic;">Offering technical services and classes to Hudson County.</p>
+      </div>
+
+    </div>
+
+    <div class="row bg-info text-white p-3 my-2">
+      <div class="col-md-12">
+        <p>Here at Hudson Linux we have very high quality hardware that allows us to offer services to the community as well as help professionals test ideas. Do you need a high powered CUDA capable GPU for your AI research? We've got you covered. Want to test your mobile app across a wide array of current iPhones and Android tablets? Do you want to test out a wide array of VR headsets with your project? We've got a good selection of VR hardware. Need a dev board with some particular version of ARM CPU? Guess where you can find one? At Hudson Linux!</p>
+
+      </div>
+    </div>
+
+    <div class="row p-3 my-2">
+      <div class="col-md-12">        
+        <p> In addition to our services, we also offer high quality classes in a variety of technical subjects. Check out the classes link to see our current offerings.</p>
+      </div>
+    </div>
+
+   <div class="row bg-info text-white p-3 my-2">
+        <div class="col-md-3 my-auto">
+            <img src="{{url_for('static', filename='kids.jpg')}}" alt="" class="img-fluid rounded-circle">
+        </div>
+        <div class="col-md-9 my-auto">
+            <p>We welcome people of all ages. Do you have a curious 11 year old who's good at math and science? Why not give him or her a head start at a great career at Hudson Linux? You often hear that the great musicians, mathematicians and programmers got started as kids. Maybe your child could use some expert guidance at this young age.</p>
+        </div>
+    </div>
+
+   <div class="row">
+        <div class="col-md-9">
+            <p> Are you an older fella who's had an idea about something for a while but just hasn't had the time and tools to get it done? Maybe we can help you scratch that itch you've had for 20 years. </p>
+        </div>
+        <div class="col-md-3">
+            <img src="{{url_for('static', filename='older_hl.png')}}" alt="" class="img-fluid mb-3 rounded">
+        </div>
+    </div>
+
+    <div class="row m-2" style="text-align:center">
+        <div class="col-md-6 offset-md-3 border border-warning">
+            <h2 style="font-weight: bold;">Curious yet?</h2>
+            <p> Give us a call at: </p>
+            <p> 551-300-9323 </p>
+            <p>Or email us at</p>
+
+            <p> support@hudsonlinux.com </p>
+        </div>
+    </div>
+
+
+
+  </div>
+</section>
+
 {% endblock %}

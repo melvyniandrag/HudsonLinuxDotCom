@@ -40,6 +40,10 @@ def create_app(test_config=None):
     def contact():
         return render_template('contact.html')
 
+    @app.route('/3dprinting/')
+    def threed():
+        return render_template('threedprintgallery.html')
+
 
 
     return app
